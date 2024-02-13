@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { Fragment, useState } from "react";
 import {
@@ -16,16 +16,21 @@ import {
 import { Dialog, Transition } from "@headlessui/react";
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
-  { name: "Requistions", href: "history", icon: ClockIcon, current: false },
-  { name: "Finance", href: "#", icon: ScaleIcon, current: false },
-  { name: "Bookings", href: "#", icon: CreditCardIcon, current: false },
-  { name: "Users", href: "#", icon: UserGroupIcon, current: false },
-  { name: "Reports", href: "#", icon: DocumentChartBarIcon, current: false },
+  { name: "Requistions", href: "requistion", icon: ClockIcon, current: false },
+  { name: "Finance", href: "finance", icon: ScaleIcon, current: false },
+  { name: "Bookings", href: "booking", icon: CreditCardIcon, current: false },
+  { name: "Users", href: "user", icon: UserGroupIcon, current: false },
+  {
+    name: "Reports",
+    href: "report",
+    icon: DocumentChartBarIcon,
+    current: false,
+  },
 ];
 const secondaryNavigation = [
-  { name: "Settings", href: "#", icon: CogIcon },
-  { name: "Help", href: "#", icon: QuestionMarkCircleIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
+  { name: "Configurations", href: "config", icon: CogIcon },
+  { name: "Help", href: "help", icon: QuestionMarkCircleIcon },
+  { name: "Privacy", href: "privacy", icon: ShieldCheckIcon },
 ];
 
 function classNames(...classes: string[]) {

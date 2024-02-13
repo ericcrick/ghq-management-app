@@ -11,18 +11,19 @@ import {
   ShieldCheckIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
-  { name: "Requistions", href: "history", icon: ClockIcon, current: false },
-  { name: "Finance", href: "#", icon: ScaleIcon, current: false },
-  { name: "Bookings", href: "#", icon: CreditCardIcon, current: false },
-  { name: "Users", href: "#", icon: UserGroupIcon, current: false },
-  { name: "Reports", href: "#", icon: DocumentChartBarIcon, current: false },
+  { name: "Requisitions", href: "requisition", icon: ClockIcon, current: false },
+  { name: "Finance", href: "finance", icon: ScaleIcon, current: false },
+  { name: "Bookings", href: "booking", icon: CreditCardIcon, current: false },
+  { name: "Users", href: "user", icon: UserGroupIcon, current: false },
+  { name: "Reports", href: "report", icon: DocumentChartBarIcon, current: false },
 ];
 const secondaryNavigation = [
-  { name: "Settings", href: "#", icon: CogIcon },
-  { name: "Help", href: "#", icon: QuestionMarkCircleIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
+  { name: "Configurations", href: "config", icon: CogIcon },
+  { name: "Help", href: "help", icon: QuestionMarkCircleIcon },
+  { name: "Privacy", href: "privacy", icon: ShieldCheckIcon },
 ];
 
 function classNames(...classes: string[]) {
@@ -35,13 +36,13 @@ const DeskTopSideBar = () => {
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex flex-grow flex-col overflow-y-auto bg-cyan-700 pb-4 pt-5">
-          <div className="flex flex-shrink-0 items-center px-4">
+          <Link href="/" className="flex flex-shrink-0 items-center px-4">
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=300"
-              alt="Easywire logo"
+              src="logo.jpeg"
+              alt="app logo"
             />
-          </div>
+          </Link>
           <nav
             className="mt-5 flex flex-1 flex-col divide-y divide-cyan-800 overflow-y-auto"
             aria-label="Sidebar"
