@@ -1,7 +1,5 @@
-import Template from "./components/template";
+import Dashboard from "./components/Dashboard/dashboard";
 
 export default function Home() {
-  return (
-    <Template/>
-  );
+  return <Dashboard />;
 }
