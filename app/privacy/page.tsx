@@ -2,7 +2,7 @@ import React from 'react'
 
 const PrivacyPage = () => {
   return (
-    <div>PrivacyPage</div>
+    <div>Privacy Page</div>
   )
 }
 
