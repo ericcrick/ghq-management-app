@@ -18,6 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html className="h-full bg-gray-100" lang="en">
       <body className={`${inter.className} h-full`}>
@@ -26,7 +27,7 @@ export default function RootLayout({
           <DeskTopSideBar />
 
           <div className="flex flex-1 flex-col lg:pl-64">
-            <Header />
+            <Header/>
             <main className="flex-1 pb-8">
               {/* Page header */}
               {children}

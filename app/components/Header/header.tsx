@@ -13,13 +13,18 @@ function classNames(...classes: string[]) {
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+    console.log("Sidebar is toggled:", sidebarOpen);
+  };
+
   return (
     <>
       <div className="flex h-16 flex-shrink-0 border-b border-gray-200 bg-white lg:border-none">
         <button
           type="button"
           className="border-r border-gray-200 px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 lg:hidden"
-          onClick={() => setSidebarOpen(true)}
+          onClick={toggleSidebar}
         >
           <span className="sr-only">Open sidebar</span>
           <Bars3CenterLeftIcon className="h-6 w-6" aria-hidden="true" />
@@ -70,7 +75,7 @@ const Header = () => {
                   />
                   <span className="ml-3 hidden text-sm font-medium text-gray-700 lg:block">
                     <span className="sr-only">Open user menu for </span>
-                    Emilia Birch
+                    Eric
                   </span>
                   <ChevronDownIcon
                     className="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
