@@ -1,8 +1,10 @@
+import MainLayout from "@/app/components/MainLayout/main-layout";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
 
 export default function BookingDetail() {
   return (
-    <div className="overflow-hidden bg-white shadow sm:rounded-lg mx-2 mt-2">
+    <MainLayout>
+          <div className="overflow-hidden bg-white shadow sm:rounded-lg mx-2 mt-2">
       <div className="px-4 py-6 sm:px-6">
         <h3 className="text-base font-semibold leading-7 text-gray-900">Applicant Information</h3>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
@@ -71,5 +73,6 @@ export default function BookingDetail() {
         </dl>
       </div>
     </div>
+    </MainLayout>
   );
 }

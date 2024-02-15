@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../components/MainLayout/main-layout'
 
 const RequisitionPage = () => {
   return (
-    <div>RequisitionPage</div>
+    <MainLayout>
+      <div>RequisitionPage</div>
+    </MainLayout>
   )
 }
 

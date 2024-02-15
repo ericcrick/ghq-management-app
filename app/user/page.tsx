@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../components/MainLayout/main-layout'
 
 const UserPage = () => {
   return (
-    <div>UserPage</div>
+    <MainLayout>
+      <div>UserPage</div>
+    </MainLayout>
   )
 }
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import MainLayout from "../components/MainLayout/main-layout";
+import Booking from "../components/Booking/booking";
 
 const AppointmentPage = () => {
   return (
-    <div>AppointmentPage</div>
-  )
-}
+    <MainLayout>
+      <Booking/>
+    </MainLayout>
+  );
+};
 
-export default AppointmentPage
+export default AppointmentPage;

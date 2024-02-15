@@ -29,7 +29,7 @@ const navigation = [
 ];
 const secondaryNavigation = [
   { name: "Configurations", href: "config", icon: CogIcon },
-  { name: "Help", href: "help", icon: QuestionMarkCircleIcon },
+  { name: "Mail", href: "mail", icon: QuestionMarkCircleIcon },
   { name: "Privacy", href: "privacy", icon: ShieldCheckIcon },
 ];
 
@@ -96,8 +96,8 @@ const MobileSidebar = () => {
                 <div className="flex flex-shrink-0 items-center px-4">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=300"
-                    alt="Easywire logo"
+                    src="logo.jpeg"
+                    alt="ghq-medical"
                   />
                 </div>
                 <nav

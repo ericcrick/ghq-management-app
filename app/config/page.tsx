@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import MainLayout from "../components/MainLayout/main-layout";
 
 const ConfigurationPage = () => {
   return (
-    <div>ConfigurationPage</div>
-  )
-}
+    <MainLayout>
+      <div>ConfigurationPage</div>
+    </MainLayout>
+  );
+};
 
-export default ConfigurationPage
+export default ConfigurationPage;

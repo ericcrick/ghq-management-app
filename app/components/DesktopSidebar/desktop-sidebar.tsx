@@ -5,8 +5,8 @@ import {
   CogIcon,
   CreditCardIcon,
   DocumentChartBarIcon,
+  EnvelopeIcon,
   HomeIcon,
-  QuestionMarkCircleIcon,
   ScaleIcon,
   ShieldCheckIcon,
   UserGroupIcon,
@@ -22,7 +22,7 @@ const navigation = [
 ];
 const secondaryNavigation = [
   { name: "Configurations", href: "config", icon: CogIcon },
-  { name: "Help", href: "help", icon: QuestionMarkCircleIcon },
+  { name: "Mail", href: "mail", icon: EnvelopeIcon },
   { name: "Privacy", href: "privacy", icon: ShieldCheckIcon },
 ];
 
@@ -38,9 +38,9 @@ const DeskTopSideBar = () => {
         <div className="flex flex-grow flex-col overflow-y-auto bg-cyan-700 pb-4 pt-5">
           <Link href="/" className="flex flex-shrink-0 items-center px-4">
             <img
-              className="h-8 w-auto rounded-full"
+              className="h-10 w-auto rounded-full"
               src="logo.jpeg"
-              alt="app logo"
+              alt="GHQ medical"
             />
           </Link>
           <nav
