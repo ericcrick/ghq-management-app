@@ -137,7 +137,7 @@ function classNames(...classes: string[]) {
 
 export default function Booking() {
   return (
-    <div className="lg:flex lg:h-full lg:flex-col px-2">
+    <div className="lg:flex lg:h-full lg:flex-col px-4">
       <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
         <h1 className="text-base font-semibold leading-6 text-gray-900">
           <time dateTime="2022-01">January 2022</time>

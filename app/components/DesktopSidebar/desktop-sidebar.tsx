@@ -15,7 +15,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
   { name: "Requisitions", href: "requisition", icon: ClockIcon, current: false },
-  { name: "Finance", href: "finance", icon: ScaleIcon, current: false },
+  { name: "Appointments", href: "appointment", icon: ScaleIcon, current: false },
   { name: "Bookings", href: "booking", icon: CreditCardIcon, current: false },
   { name: "Users", href: "user", icon: UserGroupIcon, current: false },
   { name: "Reports", href: "report", icon: DocumentChartBarIcon, current: false },
