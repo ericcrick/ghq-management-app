@@ -1,6 +1,7 @@
 "use client";
 import React, { useLayoutEffect, useRef, useState } from "react";
 
+
 const people = [
   {
     name: "Lindsay Walton",
@@ -49,7 +50,7 @@ export default function UserTable() {
   }
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div className="px-4 sm:px-6 lg:px-8 py-4">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
@@ -59,18 +60,18 @@ export default function UserTable() {
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
           <button
             type="button"
-            className="block rounded-md bg-indigo-600 px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block rounded-md bg-[#C036B4] px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#e44ed7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Add user
           </button>
         </div>
       </div>
-      <div className="mt-8 flow-root">
+      <div className="mt-8 flow-root bg-[#C036B4]">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
             <div className="relative">
               {selectedPeople.length > 0 && (
-                <div className="absolute left-14 top-0 flex h-12 items-center space-x-3 bg-white sm:left-12">
+                <div className="absolute left-14 top-0 flex h-12 items-center space-x-3 sm:left-12">
                   <button
                     type="button"
                     className="inline-flex items-center rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
@@ -91,7 +92,7 @@ export default function UserTable() {
                     <th scope="col" className="relative px-7 sm:w-12 sm:px-6">
                       <input
                         type="checkbox"
-                        className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                        className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#FA5C25] focus:ring-[#FA5C25]"
                         ref={checkbox}
                         checked={checked}
                         onChange={toggleAll}
@@ -141,11 +142,11 @@ export default function UserTable() {
                     >
                       <td className="relative px-7 sm:w-12 sm:px-6">
                         {selectedPeople.includes(person) && (
-                          <div className="absolute inset-y-0 left-0 w-0.5 bg-indigo-600" />
+                          <div className="absolute inset-y-0 left-0 w-0.5 bg-[#FA467F]" />
                         )}
                         <input
                           type="checkbox"
-                          className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                          className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#FA5C25] focus:ring-[#FA5C25]"
                           value={person.email}
                           checked={selectedPeople.includes(person)}
                           onChange={(e) =>
@@ -161,7 +162,7 @@ export default function UserTable() {
                         className={classNames(
                           "whitespace-nowrap py-4 pr-3 text-sm font-medium",
                           selectedPeople.includes(person)
-                            ? "text-indigo-600"
+                            ? "text-[#C036B4]"
                             : "text-gray-900"
                         )}
                       >
@@ -179,7 +180,7 @@ export default function UserTable() {
                       <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
                         <a
                           href="#"
-                          className="text-indigo-600 hover:text-indigo-900"
+                          className="text-[#C036B4] hover:text-[#FA5C25]"
                         >
                           Edit<span className="sr-only">, {person.name}</span>
                         </a>
@@ -195,4 +196,3 @@ export default function UserTable() {
     </div>
   );
 }
-
