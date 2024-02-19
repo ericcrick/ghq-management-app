@@ -1,20 +1,30 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 export default function Login() {
+  const router = useRouter();
+  const loginUser = () => {
+    router.push("/");
+  };
   return (
     <div className="flex min-h-full flex-1">
       <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div className="flex justify-center items-center flex-col">
-            <img className="h-20 w-auto" src="logo.jpeg" alt="GHQ Medical" />
-            <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
+            <img
+              className="h-20 w-auto rounded-full"
+              src="logo.jpeg"
+              alt="GHQ Medical"
+            />
+            <h2 className="mt-8 text-2xl  font-bold leading-9 tracking-tight text-gray-900">
+              GHQ Medical
             </h2>
           </div>
 
           <div className="mt-10">
             <div>
-              <form action="#" method="POST" className="space-y-6">
+              <form onSubmit={loginUser} className="space-y-6">
                 <div>
                   <label
                     htmlFor="email"
@@ -59,7 +69,7 @@ export default function Login() {
                       id="remember-me"
                       name="remember-me"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-[#2DBCEB] focus:ring-[#2DBCEB]"
                     />
                     <label
                       htmlFor="remember-me"
@@ -72,7 +82,7 @@ export default function Login() {
                   <div className="text-sm leading-6">
                     <a
                       href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
+                      className="font-semibold text-[#2DBCEB] hover:text-[#2DBCEB]"
                     >
                       Forgot password?
                     </a>
@@ -81,7 +91,7 @@ export default function Login() {
                 <div>
                   <button
                     type="submit"
-                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="flex w-full justify-center rounded-md bg-[#2DBCEB] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#2D80EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Sign in
                   </button>

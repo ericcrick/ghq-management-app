@@ -7,7 +7,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function SlideOver() {
+export default function Profile() {
   const [open, setOpen] = useState(true);
 
   return (
