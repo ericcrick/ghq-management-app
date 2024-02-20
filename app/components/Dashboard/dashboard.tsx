@@ -10,9 +10,9 @@ import {
 import { ScaleIcon } from "@heroicons/react/24/outline";
 
 const cards = [
-  { name: "Expenses", href: "#", icon: ScaleIcon, amount: "50" },
-  { name: "Pending Requests", href: "#", icon: ScaleIcon, amount: "40" },
-  { name: "Approved Requests", href: "#", icon: ScaleIcon, amount: "30" },
+  { name: "Meetings", href: "#", icon: ScaleIcon, amount: "50" },
+  { name: "Pending meetings", href: "#", icon: ScaleIcon, amount: "40" },
+  { name: "Mails", href: "#", icon: ScaleIcon, amount: "30" },
 ];
 const transactions = [
   {
@@ -164,7 +164,7 @@ const Dashboard = () => {
         </div>
 
         <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
-          Recent activity
+         Upcoming Meetings
         </h2>
 
         {/* Activity list (smallest breakpoint only) */}
@@ -241,13 +241,13 @@ const Dashboard = () => {
                         className="bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
                         scope="col"
                       >
-                        Transaction
+                        Pending
                       </th>
                       <th
                         className="bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900"
                         scope="col"
                       >
-                        Amount
+                        Visitor
                       </th>
                       <th
                         className="hidden bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900 md:block"
