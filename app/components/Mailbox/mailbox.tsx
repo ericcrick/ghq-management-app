@@ -23,6 +23,7 @@ import {
   UserCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const user = {
   name: "Whitney Francis",
@@ -211,12 +212,12 @@ export default function Example() {
         <header className="relative flex h-16 flex-shrink-0 items-center bg-white">
           {/* Logo area */}
           <div className="absolute inset-y-0 left-0 lg:static lg:flex-shrink-0">
-            <a
-              href="#"
-              className="flex h-16 w-16 items-center justify-center bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 lg:w-20"
+            <Link
+              href={'/'}
+              className="flex h-16 w-16 items-center justify-center bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 lg:w-20"
             >
-              <img className="h-10 w-auto rounded-full" src="logo.jpeg" alt="ghq-medical" />
-            </a>
+              <img className="h-10 w-auto rounded" src="logo.jpeg" alt="ghq-medical" />
+            </Link>
           </div>
 
           {/* Picker area */}

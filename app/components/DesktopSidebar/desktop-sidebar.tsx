@@ -38,7 +38,7 @@ const DeskTopSideBar = () => {
         <div className="flex flex-grow flex-col overflow-y-auto bg-cyan-700 pb-4 pt-5">
           <Link href="/" className="flex flex-shrink-0 items-center px-4">
             <img
-              className="h-10 w-auto rounded-full"
+              className="h-10 w-auto rounded"
               src="logo.jpeg"
               alt="GHQ medical"
             />

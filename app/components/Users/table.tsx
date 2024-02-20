@@ -55,18 +55,18 @@ export default function UserTable() {
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
             Users
-          </h1>
+          </h1> 
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
           <button
             type="button"
-            className="block rounded-md bg-[#C036B4] px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#e44ed7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block rounded-md bg-cyan-600 px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Add user
           </button>
         </div>
       </div>
-      <div className="mt-8 flow-root bg-[#C036B4]">
+      <div className="mt-8 flow-root bg-cyan-600">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
             <div className="relative">
@@ -142,11 +142,11 @@ export default function UserTable() {
                     >
                       <td className="relative px-7 sm:w-12 sm:px-6">
                         {selectedPeople.includes(person) && (
-                          <div className="absolute inset-y-0 left-0 w-0.5 bg-[#FA467F]" />
+                          <div className="absolute inset-y-0 left-0 w-0.5 bg-cyan-600" />
                         )}
                         <input
                           type="checkbox"
-                          className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#FA5C25] focus:ring-[#FA5C25]"
+                          className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
                           value={person.email}
                           checked={selectedPeople.includes(person)}
                           onChange={(e) =>
@@ -162,7 +162,7 @@ export default function UserTable() {
                         className={classNames(
                           "whitespace-nowrap py-4 pr-3 text-sm font-medium",
                           selectedPeople.includes(person)
-                            ? "text-[#C036B4]"
+                            ? "text-cyan-600"
                             : "text-gray-900"
                         )}
                       >
@@ -180,7 +180,7 @@ export default function UserTable() {
                       <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
                         <a
                           href="#"
-                          className="text-[#C036B4] hover:text-[#FA5C25]"
+                          className="text-cyan-600 hover:text-cyan-500"
                         >
                           Edit<span className="sr-only">, {person.name}</span>
                         </a>

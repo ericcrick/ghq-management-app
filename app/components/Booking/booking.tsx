@@ -9,13 +9,28 @@ import {
   EllipsisHorizontalIcon,
 } from "@heroicons/react/20/solid";
 import { Menu, Transition } from "@headlessui/react";
+type Event = {
+  id: number;
+  name: string;
+  time: string;
+  datetime: string;
+  href: string;
+};
 
-const days = [
-  { date: "2021-12-27", events: [] },
-  { date: "2021-12-28", events: [] },
-  { date: "2021-12-29", events: [] },
-  { date: "2021-12-30", events: [] },
-  { date: "2021-12-31", events: [] },
+type Day = {
+  date: string;
+  isCurrentMonth: boolean;
+  isToday?: boolean;
+  isSelected?: boolean;
+  events: Event[];
+};
+
+const days: Day[] = [
+  { date: "2021-12-27", isCurrentMonth: false, events: [] },
+  { date: "2021-12-28", isCurrentMonth: false, events: [] },
+  { date: "2021-12-29", isCurrentMonth: false, events: [] },
+  { date: "2021-12-30", isCurrentMonth: false, events: [] },
+  { date: "2021-12-31", isCurrentMonth: false, events: [] },
   { date: "2022-01-01", isCurrentMonth: true, events: [] },
   { date: "2022-01-02", isCurrentMonth: true, events: [] },
   {
@@ -111,11 +126,12 @@ const days = [
   { date: "2022-01-29", isCurrentMonth: true, events: [] },
   { date: "2022-01-30", isCurrentMonth: true, events: [] },
   { date: "2022-01-31", isCurrentMonth: true, events: [] },
-  { date: "2022-02-01", events: [] },
-  { date: "2022-02-02", events: [] },
-  { date: "2022-02-03", events: [] },
+  { date: "2022-02-01", isCurrentMonth: false, events: [] },
+  { date: "2022-02-02", isCurrentMonth: false, events: [] },
+  { date: "2022-02-03", isCurrentMonth: false, events: [] },
   {
     date: "2022-02-04",
+    isCurrentMonth: false,
     events: [
       {
         id: 7,
@@ -126,10 +142,11 @@ const days = [
       },
     ],
   },
-  { date: "2022-02-05", events: [] },
-  { date: "2022-02-06", events: [] },
+  { date: "2022-02-05", isCurrentMonth: false, events: [] },
+  { date: "2022-02-06", isCurrentMonth: false, events: [] },
 ];
-const selectedDay = days.find((day) => day.isSelected);
+
+const selectedDay = days.find((day) => day.isSelected) as Day;
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -257,7 +274,7 @@ export default function Booking() {
             <div className="ml-6 h-6 w-px bg-gray-300" />
             <button
               type="button"
-              className="ml-6 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="ml-6 rounded-md bg-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Add event
             </button>
@@ -417,7 +434,7 @@ export default function Booking() {
                   dateTime={day.date}
                   className={
                     day.isToday
-                      ? "flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 font-semibold text-white"
+                      ? "flex h-6 w-6 items-center justify-center rounded-full bg-cyan-600 font-semibold text-white"
                       : undefined
                   }
                 >
@@ -499,7 +516,7 @@ export default function Booking() {
           </div>
         </div>
       </div>
-      {selectedDay.events.length > 0 && (
+      {selectedDay.events?.length > 0 && (
         <div className="px-4 py-10 sm:px-6 lg:hidden">
           <ol className="divide-y divide-gray-100 overflow-hidden rounded-lg bg-white text-sm shadow ring-1 ring-black ring-opacity-5">
             {selectedDay?.events?.map((event) => (
