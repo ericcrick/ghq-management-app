@@ -1,8 +1,8 @@
 import React from "react";
-import Database from "../components/Database/database";
+import Database from "../components/Employees/database";
 import MainLayout from "../components/MainLayout/main-layout";
 
-const DatabasePage = () => {
+const EmployeesPage = () => {
   return (
     <MainLayout>
       <Database />
@@ -10,4 +10,4 @@ const DatabasePage = () => {
   )
 };
 
-export default DatabasePage;
+export default EmployeesPage;

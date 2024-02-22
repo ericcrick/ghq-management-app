@@ -18,7 +18,7 @@ const navigation = [
   { name: "Requisitions", href: "requisition", icon: ClockIcon, current: false },
   { name: "Appointments", href: "appointment", icon: ScaleIcon, current: false },
   { name: "Bookings", href: "booking", icon: CreditCardIcon, current: false },
-  { name: "Database", href: "database", icon: CircleStackIcon, current: false },
+  { name: "Employees", href: "employee", icon: CircleStackIcon, current: false },
   { name: "Users", href: "user", icon: UserGroupIcon, current: false },
   { name: "Reports", href: "report", icon: DocumentChartBarIcon, current: false },
 ];
