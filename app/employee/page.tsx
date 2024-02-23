@@ -1,5 +1,5 @@
 import React from "react";
-import Database from "../components/Employees/database";
+import Database from "../components/Employees/detail";
 import MainLayout from "../components/MainLayout/main-layout";
 
 const EmployeesPage = () => {

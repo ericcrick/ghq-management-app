@@ -1,11 +1,11 @@
 import React from 'react'
 import MainLayout from '../components/MainLayout/main-layout'
-import DescriptionList from '../components/DescriptionList/description-list'
+import PromotionTable from '../components/Promotion/promotion-table'
 
 const RequisitionPage = () => {
   return (
     <MainLayout>
-      <DescriptionList/>
+      <PromotionTable/>
     </MainLayout>
   )
 }
