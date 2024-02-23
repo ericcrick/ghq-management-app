@@ -1,11 +1,11 @@
 import React from "react";
-import Booking from "../components/Booking/booking";
 import MainLayout from "../components/MainLayout/main-layout";
+import LeaveTable from "../components/Leave/leave.table";
 
 const BookingPage = () => {
   return(
    <MainLayout>
-     <Booking/>
+     <LeaveTable/>
    </MainLayout>
   )
 };

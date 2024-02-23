@@ -10,7 +10,7 @@ export default function Pagination() {
       aria-label="Pagination"
     >
       <div className="hidden sm:block">
-        <p className="text-sm text-gray-400">
+        <p className="text-xs text-gray-400">
           Showing <span className="font-medium">1</span> to{" "}
           <span className="font-medium">10</span> of{" "}
           <span className="font-medium">20</span> results

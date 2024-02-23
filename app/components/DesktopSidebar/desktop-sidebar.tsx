@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  AcademicCapIcon,
   CircleStackIcon,
   ClockIcon,
   CogIcon,
@@ -8,16 +9,15 @@ import {
   DocumentChartBarIcon,
   EnvelopeIcon,
   HomeIcon,
-  ScaleIcon,
   ShieldCheckIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
-  { name: "Requisitions", href: "requisition", icon: ClockIcon, current: false },
-  { name: "Appointments", href: "appointment", icon: ScaleIcon, current: false },
-  { name: "Operations", href: "booking", icon: CreditCardIcon, current: false },
+  { name: "Appointments", href: "appointment", icon: ClockIcon, current: false },
+  { name: "Study Leave", href: "leave", icon: AcademicCapIcon, current: false },
+  { name: "Operations", href: "operation", icon: CreditCardIcon, current: false },
   { name: "Employees", href: "employee", icon: CircleStackIcon, current: false },
   { name: "Users", href: "user", icon: UserGroupIcon, current: false },
   { name: "Reports", href: "report", icon: DocumentChartBarIcon, current: false },
