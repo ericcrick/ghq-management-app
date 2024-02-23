@@ -17,15 +17,15 @@ const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: true },
   { name: "Requisitions", href: "requisition", icon: ClockIcon, current: false },
   { name: "Appointments", href: "appointment", icon: ScaleIcon, current: false },
-  { name: "Bookings", href: "booking", icon: CreditCardIcon, current: false },
+  { name: "Operations", href: "booking", icon: CreditCardIcon, current: false },
   { name: "Employees", href: "employee", icon: CircleStackIcon, current: false },
   { name: "Users", href: "user", icon: UserGroupIcon, current: false },
   { name: "Reports", href: "report", icon: DocumentChartBarIcon, current: false },
+  { name: "Promotions", href: "promotion", icon: ShieldCheckIcon },
 ];
 const secondaryNavigation = [
   { name: "Configurations", href: "config", icon: CogIcon },
   { name: "Mail", href: "mail", icon: EnvelopeIcon },
-  { name: "Privacy", href: "privacy", icon: ShieldCheckIcon },
 ];
 
 function classNames(...classes: string[]) {
