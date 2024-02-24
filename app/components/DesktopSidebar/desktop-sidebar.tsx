@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -119,7 +119,7 @@ const DeskTopSideBar = () => {
                         )}
                       >
                         <item.icon
-                          className="mr-4 h-6 w-6 text-cyan-200"
+                          className="h-6 w-6 text-cyan-200"
                           aria-hidden="true"
                         />
                         {item.name}
@@ -131,21 +131,21 @@ const DeskTopSideBar = () => {
                             <Disclosure.Button
                               className={classNames(
                                 item.current
-                                ? "bg-cyan-800 text-white"
-                                : "text-cyan-100 hover:bg-cyan-600 hover:text-white",
-                              "group flex gap-x-3 rounded p-2 text-sm leading-6 text-gray-700 group  items-center  px-2 py-2 font-medium "
+                                  ? "bg-cyan-800 text-white"
+                                  : "text-cyan-100 hover:bg-cyan-600 hover:text-white",
+                                "group flex gap-x-3 rounded p-2 text-sm leading-6 text-gray-700 group  items-center w-full px-2 py-2 font-medium "
                               )}
                             >
                               <item.icon
-                                className="h-6 w-6 shrink-0 text-gray-400"
+                                className="h-6 w-6 shrink-0 text-cyan-200"
                                 aria-hidden="true"
                               />
                               {item.name}
                               <ChevronRightIcon
                                 className={classNames(
                                   open
-                                    ? "rotate-90 text-gray-500"
-                                    : "text-gray-400",
+                                    ? "rotate-90 text-gray-600"
+                                    : "text-gray-600",
                                   "ml-auto h-5 w-5 shrink-0"
                                 )}
                                 aria-hidden="true"
@@ -162,7 +162,7 @@ const DeskTopSideBar = () => {
                                       subItem?.current
                                         ? "bg-gray-50"
                                         : "hover:bg-gray-50",
-                                      "block rounded py-2 pr-2 pl-9 text-sm leading-6 text-gray-700"
+                                      "block rounded py-2 pr-2 pl-9 text-xs text-gray-800"
                                     )}
                                   >
                                     {subItem.name}
