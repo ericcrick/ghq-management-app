@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
@@ -16,9 +16,11 @@ import {
   ShieldCheckIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import { Disclosure } from "@headlessui/react";
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, current: true },
+  { name: "Home", href: "", icon: HomeIcon, current: true },
   {
     name: "Appointments",
     href: "appointment",
@@ -41,27 +43,41 @@ const navigation = [
   },
   { name: "Promotions", href: "promotion", icon: ShieldCheckIcon },
   { name: "Mail", href: "mail", icon: EnvelopeIcon },
-];
-const secondaryNavigation = [
+
   {
     name: "Employees",
-    href: "employee",
     icon: CircleStackIcon,
+    current: false,
     children: [
-      { name: "View All Employees", href: "/employee/all" },
-      { name: "Add New Employee", href: "/employee/add" },
-      { name: "Employee Details", href: "/employee/details" },
+      {
+        name: "View All Employees",
+        href: "/employee/all",
+        current: false,
+        icon: null,
+      },
+      {
+        name: "Add New Employee",
+        href: "/employee/add",
+        current: false,
+        icon: null,
+      },
+      {
+        name: "Employee Details",
+        href: "/employee/details",
+        current: false,
+        icon: null,
+      },
     ],
   },
   {
     name: "Configurations",
-    href: "config",
     icon: CogIcon,
+    current: false,
     children: [
-      { name: "Arm of Service", href: "#" },
-      { name: "Marital Status", href: "#" },
-      { name: "Designations", href: "#" },
-      { name: "Departments", href: "#" },
+      { name: "Arm of Service", href: "#", current: false, icon: null },
+      { name: "Marital Status", href: "#", current: false, icon: null },
+      { name: "Designations", href: "#", current: false, icon: null },
+      { name: "Departments", href: "#", current: false, icon: null },
     ],
   },
 ];
@@ -71,96 +87,113 @@ function classNames(...classes: string[]) {
 }
 
 const DeskTopSideBar = () => {
-  const [openItems, setOpenItems] = useState<string[]>([]);
-
-  const toggleItem = (name: string) => {
-    setOpenItems((prevOpenItems) =>
-      prevOpenItems.includes(name)
-        ? prevOpenItems.filter((item) => item !== name)
-        : [...prevOpenItems, name]
-    );
-  };
-
   return (
     <>
       {/* Static sidebar for desktop */}
-      <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
-        {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div className="flex flex-grow flex-col overflow-y-auto bg-cyan-700 pb-4 pt-5">
-          <Link href="/" className="flex flex-shrink-0 items-center px-4">
-            <img
-              className="h-10 w-auto rounded"
-              src="logo.jpeg"
+      <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col  bg-cyan-700 ">
+        <div className="flex h-14 shrink-0 items-center">
+          <Link href="/" className="flex flex-shrink-0 items-center px-2">
+            <Image
+              className="h-auto w-auto rounded object-contain"
+              src="/logo.jpeg"
               alt="GHQ medical"
+              width={40}
+              height={40}
             />
           </Link>
-          <nav
-            className="mt-5 flex flex-1 flex-col divide-y divide-cyan-800 overflow-y-auto"
-            aria-label="Sidebar"
-          >
-            <div className="space-y-1 px-2">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-cyan-800 text-white"
-                      : "text-cyan-100 hover:bg-cyan-600 hover:text-white",
-                    "group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  <item.icon
-                    className="mr-4 h-6 w-6 flex-shrink-0 text-cyan-200"
-                    aria-hidden="true"
-                  />
-                  {item.name}
-                </a>
-              ))}
-            </div>
-            <div className="mt-6 pt-6">
-              <div className="space-y-1 px-2">
-                {secondaryNavigation.map((item) => (
-                  <div key={item.name}>
-                    <div
-                      className="group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 text-cyan-100 hover:bg-cyan-600 hover:text-white"
-                      onClick={() => toggleItem(item.name)}
-                    >
-                      <item.icon
-                        className="mr-4 h-6 w-6 text-cyan-200"
-                        aria-hidden="true"
-                      />
-                      {item.name}
-                      <ChevronRightIcon
-                        className={classNames(
-                          "ml-auto h-5 w-5 flex-shrink-0 text-cyan-400 group-hover:text-cyan-200 transition-colors ease-in-out duration-150",
-                          openItems.includes(item.name)
-                            ? "transform rotate-90"
-                            : ""
-                        )}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    {item.children && openItems.includes(item.name) && (
-                      <div className="pl-4">
-                        {item.children.map((child) => (
-                          <a
-                            key={child.name}
-                            href={child.href}
-                            className="group flex items-center rounded-md px-10 py-2 text-xs font-medium leading-6 text-cyan-100 hover:bg-cyan-600 hover:text-white"
-                          >
-                            {child.name}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </nav>
         </div>
+        <nav className="flex flex-grow flex-col overflow-y-auto pb-4 pt-5">
+          <ul role="list" className="flex flex-1 flex-col gap-y-7 px-4">
+            <li>
+              <ul role="list" className="-mx-2 space-y-1">
+                {navigation.map((item) => (
+                  <li key={item.name}>
+                    {!item.children ? (
+                      <a
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-cyan-800 text-white"
+                            : "text-cyan-100 hover:bg-cyan-600 hover:text-white",
+                          "group flex gap-x-3 rounded p-2 text-sm leading-6 text-gray-700 group  items-center  px-2 py-2 font-medium "
+                        )}
+                      >
+                        <item.icon
+                          className="mr-4 h-6 w-6 text-cyan-200"
+                          aria-hidden="true"
+                        />
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Disclosure as="div">
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button
+                              className={classNames(
+                                item.current
+                                ? "bg-cyan-800 text-white"
+                                : "text-cyan-100 hover:bg-cyan-600 hover:text-white",
+                              "group flex gap-x-3 rounded p-2 text-sm leading-6 text-gray-700 group  items-center  px-2 py-2 font-medium "
+                              )}
+                            >
+                              <item.icon
+                                className="h-6 w-6 shrink-0 text-gray-400"
+                                aria-hidden="true"
+                              />
+                              {item.name}
+                              <ChevronRightIcon
+                                className={classNames(
+                                  open
+                                    ? "rotate-90 text-gray-500"
+                                    : "text-gray-400",
+                                  "ml-auto h-5 w-5 shrink-0"
+                                )}
+                                aria-hidden="true"
+                              />
+                            </Disclosure.Button>
+                            <Disclosure.Panel as="ul" className="mt-1 px-2">
+                              {item.children.map((subItem) => (
+                                <li key={subItem.name}>
+                                  {/* 44px */}
+                                  <Disclosure.Button
+                                    as="a"
+                                    href={subItem.href}
+                                    className={classNames(
+                                      subItem?.current
+                                        ? "bg-gray-50"
+                                        : "hover:bg-gray-50",
+                                      "block rounded py-2 pr-2 pl-9 text-sm leading-6 text-gray-700"
+                                    )}
+                                  >
+                                    {subItem.name}
+                                  </Disclosure.Button>
+                                </li>
+                              ))}
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li className="-mx-6 mt-auto px-4">
+              <a
+                href="#"
+                className="flex items-center gap-x-4 px-6 py-2 rounded text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+              >
+                <img
+                  className="h-8 w-8 rounded-full bg-gray-50"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+                <span className="sr-only">Your profile</span>
+                <span aria-hidden="true">Tom Cook</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </>
   );
