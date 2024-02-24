@@ -5,7 +5,7 @@ function classNames(...classes: any) {
 }
 
 import React, { useLayoutEffect, useRef, useState } from "react";
-import Pagination from "./table-pagination";
+import Pagination from "../Users/table-pagination";
 
 type Person = {
   name: string;
@@ -82,7 +82,7 @@ function BulkActions() {
   );
 }
 
-export default function UserTable() {
+export default function OperationTable() {
   const [checked, setChecked] = useState(false);
   const [indeterminate, setIndeterminate] = useState(false);
   const [selectedPeople, setSelectedPeople] = useState<Person[]>([]);
@@ -107,7 +107,7 @@ export default function UserTable() {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto overflow-y-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
-            Users
+            Employees in Operations
           </h1>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -115,7 +115,7 @@ export default function UserTable() {
             type="button"
             className="block rounded-md bg-cyan-600 px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Add user
+            Create Operation
           </button>
         </div>
       </div>
