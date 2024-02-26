@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { UnstyledButton, Tooltip, Title, rem } from "@mantine/core";
 import {

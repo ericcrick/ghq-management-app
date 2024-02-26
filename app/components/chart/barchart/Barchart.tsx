@@ -1,6 +1,7 @@
 import { BarChart } from "@mantine/charts";
 import { data } from "./data";
 
+
 export function BarChartReport() {
   return (
     <BarChart
@@ -12,7 +13,7 @@ export function BarChartReport() {
         { name: "Laptops", color: "blue.6" },
         { name: "Tablets", color: "teal.6" },
       ]}
-      tickLine="y"
+      tickLine="xy"
     />
   );
 }

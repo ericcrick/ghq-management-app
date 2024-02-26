@@ -5,4 +5,5 @@ export const data = [
   { month: "April", Smartphones: 1000, Laptops: 200, Tablets: 800 },
   { month: "May", Smartphones: 800, Laptops: 1400, Tablets: 1200 },
   { month: "June", Smartphones: 750, Laptops: 600, Tablets: 1000 },
+  { month: "December", Smartphones: 720, Laptops: 100, Tablets: 100 },
 ];
