@@ -103,7 +103,7 @@ export default function PromotionTable() {
   }
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-4 h-screen">
+    <div className="px-4 sm:px-6 lg:px-8 py-4 h-screen max-w-200">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto overflow-y-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
