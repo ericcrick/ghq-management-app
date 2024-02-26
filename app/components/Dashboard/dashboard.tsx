@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 import { ScaleIcon } from "@heroicons/react/24/outline";
+import { BarChartReport } from "../chart/barchart/Barchart";
 
 const cards = [
   { name: "Meetings", href: "#", icon: ScaleIcon, amount: "50" },
@@ -113,7 +114,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
+      <BarChartReport />
       <div className="mt-8">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-lg font-medium leading-6 text-gray-900">
@@ -164,7 +165,7 @@ const Dashboard = () => {
         </div>
 
         <h2 className="mx-auto mt-8 max-w-6xl px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">
-         Upcoming Meetings
+          Upcoming Meetings
         </h2>
 
         {/* Activity list (smallest breakpoint only) */}

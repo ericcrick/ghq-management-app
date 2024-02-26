@@ -28,7 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} h-full w-screen`}>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
   );
