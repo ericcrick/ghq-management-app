@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
+import '@mantine/dates/styles.css';
+import '@mantine/dropzone/styles.css';
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Management App",
@@ -18,16 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="h-full bg-gray-100" lang="en">
-      {/* <head>
+    <html className="h-full bg-gray-200" lang="en">
+      <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
-      </head> */}
-      <body className={`${inter.className} h-full w-screen`}>
+      </head>
+      <body className="h-full w-screen">
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
