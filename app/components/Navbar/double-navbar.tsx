@@ -80,11 +80,11 @@ export function DoubleNavbar() {
       <div className={classes.wrapper}>
         <div className={classes.aside}>
           <div className={classes.logo}>
-            <Image src={MantineLogo} alt="app logo" width={40} height={40} />
+            <Image className="h-auto w-auto" src={MantineLogo} alt="app logo" width={40} height={40} />
           </div>
           {mainLinks}
         </div>
-        <div className={classes.main}>
+        <div className={`${classes.main}`}>
           <Title order={4} className={classes.title}>
             {active}
           </Title>
