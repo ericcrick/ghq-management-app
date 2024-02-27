@@ -2,12 +2,12 @@ import React from "react";
 import DeskTopSideBar from "../DesktopSidebar/desktop-sidebar";
 import Header from "../Header/header";
 import MobileSidebar from "../MobileSidebar/mobile-sidebar";
-import { DoubleNavbar } from "../Navbar/double-navbar";
+import { DoubleNavbar } from "../Navbar/DoubleNavbar";
 
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-full w-full flex">
+    <div className="h-screen w-full flex">
       {/* <MobileSidebar /> */}
       {/* <DeskTopSideBar /> */}
       <DoubleNavbar/>

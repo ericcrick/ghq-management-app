@@ -10,6 +10,7 @@ export function LineChartReport() {
       series={[{ name: 'Apples', color: 'indigo.6' }]}
       curveType="linear"
       connectNulls
+      className='px-4'
     />
   );
 }
