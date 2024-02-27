@@ -305,8 +305,8 @@ function classNames(...classes: any) {
 
 export default function Employees() {
   return (
-    <div className="relative z-0 flex flex-1 h-screen">
-      <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
+    <div className="relative flex flex-1 h-full">
+      <main className="relative  flex-1 overflow-y-auto focus:outline-none xl:order-last">
         <article>
           {/* Profile header */}
           <div>
@@ -510,7 +510,7 @@ export default function Employees() {
           </form>
         </div>
         {/* Directory list */}
-        <nav className="min-h-0 flex-1 overflow-y-auto" aria-label="Directory">
+        <nav className="flex-1 overflow-y-auto" aria-label="Directory">
           {Object.keys(directory).map((letter) => (
             <div key={letter} className="relative">
               <div className="sticky top-0 z-10 border-b border-t border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
