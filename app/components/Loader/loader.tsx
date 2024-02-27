@@ -1,5 +1,9 @@
-import { Loader } from "@mantine/core";
+import { Center, Loader } from "@mantine/core";
 
-export function Loading() {
-  return <Loader color="#0891b2" />;
+export default function LoadingSpinner() {
+  return (
+    <Center maw={400} h={100} bg="var(--mantine-color-gray-light)">
+      <Loader color="#0891b2" />
+    </Center>
+  );
 }
