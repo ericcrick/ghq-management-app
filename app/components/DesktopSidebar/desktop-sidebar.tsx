@@ -56,8 +56,8 @@ const navigation = [
         icon: null,
       },
       {
-        name: "Add New Employee",
-        href: "/employee/add",
+        name: "Create Employee",
+        href: "/employee/create",
         current: false,
         icon: null,
       },

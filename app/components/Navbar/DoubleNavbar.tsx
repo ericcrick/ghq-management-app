@@ -47,8 +47,8 @@ const mainLinksMockdata: MainLink[] = [
         href: "/employee/all",
       },
       {
-        label: "Add New Employee",
-        href: "/employee/add",
+        label: "Create Employee",
+        href: "/employee/create",
       },
       {
         label: "Employee Details",

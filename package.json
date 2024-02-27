@@ -18,7 +18,6 @@
     "@mantine/form": "^7.5.3",
     "@mantine/hooks": "^7.5.3",
     "@mantine/modals": "^7.5.3",
-    "@tabler/icons-react": "^2.47.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "dayjs": "^1.11.10",
