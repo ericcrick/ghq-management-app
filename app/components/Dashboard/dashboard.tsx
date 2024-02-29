@@ -1,11 +1,12 @@
 import React from "react";
-import { ScaleIcon } from "@heroicons/react/24/outline";
+import { AcademicCapIcon, CircleStackIcon, ClockIcon, RocketLaunchIcon, ScaleIcon } from "@heroicons/react/24/outline";
 import { LineChartReport } from "../Chart/linechart/line-chart";
 
 const cards = [
-  { name: "Meetings", href: "#", icon: ScaleIcon, amount: "50" },
-  { name: "Pending meetings", href: "#", icon: ScaleIcon, amount: "40" },
-  { name: "Mails", href: "#", icon: ScaleIcon, amount: "30" },
+  { name: "Employees", href: "/employee/all", icon: CircleStackIcon, amount: "50" },
+  { name: "Operations", href: "/operation", icon: RocketLaunchIcon, amount: "40" },
+  { name: "Study  Leave", href: "/leave", icon: AcademicCapIcon, amount: "30" },
+  { name: "Appointments", href: "/appointment", icon: ClockIcon, amount: "30" },
 ];
 
 

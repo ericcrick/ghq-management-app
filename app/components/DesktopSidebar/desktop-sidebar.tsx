@@ -25,7 +25,7 @@ const navigation = [
     name: "Appointments",
     href: "appointment",
     icon: ClockIcon,
-    current: false,
+    current: false, 
   },
   { name: "Study Leave", href: "leave", icon: AcademicCapIcon, current: false },
   {

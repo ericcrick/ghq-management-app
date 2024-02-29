@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState, useEffect } from "react";
-import { UnstyledButton, Tooltip, Title, rem } from "@mantine/core";
+import { UnstyledButton, Tooltip, Title, } from "@mantine/core";
 import MantineLogo from "../../../public/logo.jpeg";
 import classes from "./DoubleNavbar.module.css";
 import Link from "next/link";
@@ -10,11 +10,13 @@ import { usePathname } from "next/navigation";
 import {
   AcademicCapIcon,
   CircleStackIcon,
+  ClockIcon,
+  EnvelopeIcon,
   CogIcon,
   HomeIcon,
-  UserIcon,
-} from "@heroicons/react/20/solid";
-import { EnvelopeIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
+  NewspaperIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/outline";
 
 type LinkItem = {
   label: string;
@@ -34,8 +36,6 @@ const mainLinksMockdata: MainLink[] = [
     links: [
       { label: "Dashboard", href: "/" },
       { label: "Report", href: "/report" },
-      { label: "Analytics", href: "/analytics" },
-      { label: "Releases", href: "/releases" },
     ],
   },
   {
@@ -43,22 +43,52 @@ const mainLinksMockdata: MainLink[] = [
     label: "Employees",
     links: [
       {
-        label: "View All Employees",
+        label: "List of Employees",
         href: "/employee/all",
       },
       {
-        label: "Create Employee",
+        label: "Add New Employee",
         href: "/employee/create",
       },
       {
-        label: "Employee Details",
+        label: "View Employee Details",
         href: "/employee/details",
       },
     ],
   },
   {
+    label: "Appointments",
+    icon: ClockIcon,
+    links: [
+      {
+        label: "List of Appointments",
+        href: "/appointment",
+      },
+    ],
+  },
+
+  {
+    label: "Operations",
+    icon: RocketLaunchIcon,
+    links: [{ label: "Employees on Operations", href: "/operation" }],
+  },
+  {
+    label: "Study Leave",
+    icon: AcademicCapIcon,
+    links: [
+      {
+        label: "Employees on Study Leave",
+        href: "/study-leave",
+      },
+      {
+        label: "Create Study Leave",
+        href: "/create",
+      },
+    ],
+  },
+  {
     label: "Promotions",
-    icon: ShieldCheckIcon,
+    icon: NewspaperIcon,
     links: [
       {
         label: "Promotion List",
