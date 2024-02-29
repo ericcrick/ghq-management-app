@@ -6,7 +6,7 @@ import LoadingSpinner from "../Loader/loader";
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Suspense fallback={<LoadingSpinner />}>
-      <div className="h-screen w-full flex">
+      <div className="h-screen w-full flex bg-gray-200">
         <DoubleNavbar />
 
         <div className="flex flex-1 flex-col">
