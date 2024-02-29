@@ -1,5 +1,5 @@
 import React from "react";
-import { AcademicCapIcon, CircleStackIcon, ClockIcon, RocketLaunchIcon, ScaleIcon } from "@heroicons/react/24/outline";
+import { AcademicCapIcon, CircleStackIcon, ClockIcon, RocketLaunchIcon,} from "@heroicons/react/24/outline";
 import { LineChartReport } from "../Chart/linechart/line-chart";
 
 const cards = [
@@ -12,9 +12,9 @@ const cards = [
 
 const Dashboard = () => {
   return (
-    <div className="space-y-10 h-screen">
+    <div className="space-y-10 h-full w-full">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mb-4">
-        <h2 className="text-lg font-medium leading-6 text-gray-900">
+        <h2 className="text-lg pt-4 font-medium leading-6 text-gray-900">
           Overview
         </h2>
         <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

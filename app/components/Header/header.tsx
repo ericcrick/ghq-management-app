@@ -1,7 +1,7 @@
 "use client";
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { Bars3CenterLeftIcon, BellIcon } from "@heroicons/react/24/outline";
+import { BellIcon } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
@@ -12,23 +12,23 @@ function classNames(...classes: string[]) {
 }
 
 const Header = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-    console.log("Sidebar is toggled:", sidebarOpen);
-  };
+  // const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const toggleSidebar = () => {
+  //   setSidebarOpen(!sidebarOpen);
+  //   console.log("Sidebar is toggled:", sidebarOpen);
+  // };
 
   return (
     <>
       <div className="flex h-[60px] flex-shrink-0 border-b border-gray-200 bg-white">
-        <button
+        {/* <button
           type="button"
           className="border-r border-gray-200 px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 lg:hidden"
           onClick={toggleSidebar}
         >
           <span className="sr-only">Open sidebar</span>
           <Bars3CenterLeftIcon className="h-6 w-6" aria-hidden="true" />
-        </button>
+        </button> */}
         {/* Search bar */}
         <div className="flex flex-1 justify-between px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
           <div className="flex flex-1">
@@ -75,7 +75,7 @@ const Header = () => {
                   />
                   <span className="ml-3 hidden text-sm font-medium text-gray-700 lg:block">
                     <span className="sr-only">Open user menu for </span>
-                    Dora
+                    Admin
                   </span>
                   <ChevronDownIcon
                     className="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
