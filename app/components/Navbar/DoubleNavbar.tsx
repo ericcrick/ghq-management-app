@@ -79,7 +79,7 @@ const mainLinksMockdata: MainLink[] = [
     links: [
       {
         label: "Employees on Study Leave",
-        href: "/study-leave",
+        href: "/leave",
       },
       {
         label: "Create Study Leave",
