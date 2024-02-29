@@ -6,6 +6,7 @@ function classNames(...classes: any) {
 
 import React, { useLayoutEffect, useRef, useState } from "react";
 import Pagination from "./table-pagination";
+import Link from "next/link";
 
 type Person = {
   name: string;
@@ -111,12 +112,14 @@ export default function UserTable() {
           </h1>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-          <button
-            type="button"
-            className="block rounded-md bg-cyan-600 px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Add user
-          </button>
+          <Link href="/user/create">
+            <button
+              type="button"
+              className="block rounded-md bg-cyan-600 px-3 py-1.5 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Add user
+            </button>
+          </Link>
         </div>
       </div>
       <div className="mt-8 flow-root bg-white">

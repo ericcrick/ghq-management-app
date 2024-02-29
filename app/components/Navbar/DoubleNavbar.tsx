@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState, useEffect } from "react";
-import { UnstyledButton, Tooltip, Title, } from "@mantine/core";
+import { UnstyledButton, Tooltip, Title } from "@mantine/core";
 import MantineLogo from "../../../public/logo.jpeg";
 import classes from "./DoubleNavbar.module.css";
 import Link from "next/link";
@@ -16,6 +16,7 @@ import {
   HomeIcon,
   NewspaperIcon,
   RocketLaunchIcon,
+  UsersIcon,
 } from "@heroicons/react/24/outline";
 
 type LinkItem = {
@@ -102,10 +103,17 @@ const mainLinksMockdata: MainLink[] = [
     links: [{ label: "Mail", href: "/mail" }],
   },
   {
+    icon: UsersIcon,
+    label: "Users",
+    links: [
+      { label: "User List", href: "/user" },
+      { label: "Add User", href: "/user/create" },
+    ],
+  },
+  {
     label: "Configurations",
     icon: CogIcon,
     links: [
-      { label: "Users", href: "/user" },
       { label: "Arm of Service", href: "#" },
       { label: "Marital Status", href: "#" },
       { label: "Designations", href: "#" },
