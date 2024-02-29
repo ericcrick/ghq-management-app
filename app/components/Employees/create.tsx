@@ -1,4 +1,5 @@
 "use clients";
+
 import {
   NumberInput,
   ScrollArea,
@@ -8,9 +9,11 @@ import {
 } from "@mantine/core";
 import { DateInput } from "@mantine/dates";
 import { SubmitButton } from "../SubmitButton/SubmitButton";
+import { IMaskInput } from "react-imask";
+
 export function AddEmployee() {
   return (
-    <>
+    <div className="flex flex-col h-full w-full overflow-y-auto">
       <h2 className="px-2 text-gray-600 font-bold text-lg">
         Create New Employee
       </h2>
@@ -179,8 +182,9 @@ export function AddEmployee() {
 
             <div className="md:col-span-1">
               <TextInput
+                withAsterisk
+                placeholder="Primary Contact"
                 label="Contact Number 1"
-                placeholder="Contact Number 1"
               />
             </div>
             <div className="md:col-span-1">
@@ -243,6 +247,6 @@ export function AddEmployee() {
           </form>
         </div>
       </ScrollArea>
-    </>
+    </div>
   );
 }
